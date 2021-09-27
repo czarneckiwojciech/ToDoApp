@@ -1,0 +1,166 @@
+:root {
+  --main-purple: #af7eeb;
+  --main-grey: #787878;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #e3e9ff;
+}
+
+.todo-container {
+  width: 500px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 16px 20px;
+  margin-bottom: 40px;
+  background-color: var(--main-purple);
+  color: #ffffff;
+  box-shadow: 0 0 9px 1px #e6e6e6;
+}
+
+.navbar > p {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.todo-list {
+  position: relative;
+  height: 300px;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 0 30px 1px #e6e6e6;
+}
+
+.todo-list-element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--main-grey);
+}
+
+.check-task-btn {
+  cursor: pointer;
+}
+
+.todo-list-element:hover .todo-trash-btn {
+  display: inline-block;
+}
+
+.completed .todo-name {
+  text-decoration: line-through;
+}
+
+.fas.check-task-btn {
+  color: var(--main-purple);
+}
+
+.todo-name {
+  font-size: 1.1rem;
+}
+
+.todo-name-box {
+  display: flex;
+  align-items: center;
+}
+
+.todo-name-box > i {
+  margin-right: 8px;
+}
+
+.todo-trash-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.show-modal-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--main-purple);
+  color: #ffffff;
+  font-size: 1.1rem;
+  box-shadow: 0 0 9px 1px #c2c2c2;
+  transform: translate(-50%, 50%);
+  cursor: pointer;
+}
+
+.show-modal-btn:active {
+  box-shadow: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2a2a4d;
+  backdrop-filter: blur(1px);
+}
+
+.modal-container {
+  width: 400px;
+  height: 300px;
+  padding: 30px 40px;
+  background-color: #ffffff;
+}
+
+.task-input {
+  width: 100%;
+  padding: 4px 8px;
+  margin-bottom: 40px;
+  font-size: 1.04rem;
+  border: 1px solid var(--main-grey);
+  color: var(--main-grey);
+}
+
+.task-input:focus-visible {
+  outline: none;
+}
+
+.modal-btns-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-btn {
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  background-color: var(--main-purple);
+  color: #ffffff;
+  box-shadow: 0 0 9px 1px #c2c2c2;
+  cursor: pointer;
+}
+
+.modal-btn:first-of-type {
+  margin-right: 10px;
+}
+
+.modal-btn:active {
+  box-shadow: none;
+}
+
+.hidden {
+  display: none;
+}
